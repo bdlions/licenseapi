@@ -14,16 +14,16 @@ class License_key extends CI_Controller {
     
     public function create_license_key()
     {
-        
+        $this->template->load(ADMIN_LOGIN_SUCCESS_TEMPLATE,"admin/license_key/create_license_key"); 
     }
     
     public function update_license_key()
     {
-        
+       $this->template->load(ADMIN_LOGIN_SUCCESS_TEMPLATE,"admin/license_key/update_license_key");   
     }
     
     public function delete_license_key()
     {
-        
+        $this->template->load(ADMIN_LOGIN_SUCCESS_TEMPLATE,"admin/license_key/modal_delete_license_key_confirm");     
     }
 }

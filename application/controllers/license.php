@@ -14,11 +14,11 @@ class License extends CI_Controller {
     
     public function update_license()
     {
-        
+       $this->template->load(ADMIN_LOGIN_SUCCESS_TEMPLATE,"admin/license/update_license");   
     }
     
     public function delete_license()
     {
-        
+       $this->template->load(ADMIN_LOGIN_SUCCESS_TEMPLATE,"admin/license/modal_delete_license_confirm");      
     }
 }
