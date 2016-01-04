@@ -5,10 +5,11 @@ class License extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
         $this->load->library('form_validation');
+        $this->load->model('org/license_model');
     }
     public function index()
     {
-        $this->data['message'] = "";
+        $this->data['license_list'] = $this->license_model->get_all_licenses();
         $this->template->load(ADMIN_LOGIN_SUCCESS_TEMPLATE,"admin/license/index", $this->data);
     }
     

@@ -14,28 +14,24 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr class="table_row_style">
+                                <th style="text-align: center;">Key</th>
                                 <th style="text-align: center;">Is Used</th>
                                 <th style="text-align: center;">Created on</th>
                                 <th style="text-align: center;">Modified on</th>
                                 <th style="text-align: center;">Edit</th>
                                 <th style="text-align: center;">Delete</th>
                             </tr>
+                            <?php foreach($license_key_list as $license_key_info){?>
                             <tr>
-                                <th style="text-align: center;">3</th>
-                                <th style="text-align: center;">5232634</th>
-                                <th style="text-align: center;">3246452</th>
-                                <th style="text-align: center"><a href="<?php echo base_url() . "license_key/update_license_key"; ?>">Edit</a></th>
-                                <th style="text-align: center; cursor: pointer;"><a onclick="open_modal_delete_license_key_confirm()"value="" class="">
+                                <th style="text-align: center;"><?php echo $license_key_info->key?></th>
+                                <th style="text-align: center;"><?php echo $license_key_info->isUsed?></th>
+                                <th style="text-align: center;"><?php echo $license_key_info->createdOn?></th>
+                                <th style="text-align: center;"><?php echo $license_key_info->modifiedOn?></th>
+                                <th style="text-align: center"><a href="<?php echo base_url() . "license_key/update_license_key/".$license_key_info->key; ?>">Edit</a></th>
+                                <th style="text-align: center; cursor: pointer;"><a onclick="open_modal_delete_license_key_confirm('<?php echo $license_key_info->key?>')"value="" class="">
                                         Delete </a></th>
                             </tr>
-                            <tr>
-                                <th style="text-align: center;">5</th>
-                                <th style="text-align: center;">304523</th>
-                                <th style="text-align: center;">432435</th>
-                                <th style="text-align: center"><a href="<?php echo base_url() . "license_key/update_license_key"; ?>">Edit</a></th>
-                                <th style="text-align: center; cursor: pointer;"><a onclick="open_modal_delete_license_key_confirm()"value="" class="">
-                                        Delete </a></th>
-                            </tr>
+                            <?php } ?>
                         </thead>
                     </table>
                 </div>

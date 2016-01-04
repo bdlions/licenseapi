@@ -1,8 +1,22 @@
 <script type="text/javascript">
-
-    function open_modal_delete_license_key_confirm() {
-//        alert("Gfdg");
-        
+    $(function() {
+        $("#button_delete_license_key").on("click", function() {
+            $.ajax({
+                dataType: 'json',
+                type: "POST",
+                url: '<?php echo base_url(); ?>' + "license_key/delete_license_key",
+                data: {
+                    license_key_id: $("#input_license_key_id").val()
+                },
+                success: function(data) {
+                    $("#modal_link_delete_confirm").modal('hide');
+                    window.location.reload();
+                }
+            });
+        });
+    });
+    function open_modal_delete_license_key_confirm(license_key_id) {
+        $("#input_license_key_id").val(license_key_id);
         $("#modal_delete_license_key_confirm").modal('show');        
     }
 </script>
@@ -18,7 +32,7 @@
                     <div class="row form-group">
                         <div class ="col-sm-2"></div>
                         <label class="col-sm-10 control-label">Are you sure to delete this License key?</label>
-<!--                        <input id="input_menu_id" name="input_menu_id" value="" type="hidden" class="form-control"/>-->
+                        <input id="input_license_key_id" name="input_license_key_id" value="" type="hidden" class="form-control"/>
                     </div>
                 </div>                
             </div>

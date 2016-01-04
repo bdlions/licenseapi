@@ -5,7 +5,7 @@
         <meta name="author" content="Nazmul Hasan, Alamgir Kabir">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content=""/>
-        <title>Admin API</title>
+        <title>License API</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/css/bootstrap.min.css">
          <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>resources/css/custom_styles.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>resources/css/zebra_datePicker.css" type="text/css">

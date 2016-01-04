@@ -9,34 +9,18 @@
                         <div class="col-md-12"></div>
                     </div>
                     <div class="form-group">
-                        <label for="is_used" class="col-md-6 control-label requiredField">
-                           Is Used : 
+                        <label for="key" class="col-md-6 control-label requiredField">
+                           Key : 
                         </label>
                         <div class ="col-md-6">
-                            <input id="is_used" class="form-control" type="text" value="" name="is_used">
+                            <?php echo form_input($key + array('class' => 'form-control')); ?>
                         </div> 
-                    </div>
-                    <div class="form-group">
-                        <label for="created_on" class="col-md-6 control-label requiredField">
-                        Created on : 
-                        </label>
-                        <div class ="col-md-6">
-                            <input id="created_on" class="form-control" type="text" value="" name="created_on">
-                        </div> 
-                    </div>
-                    <div class="form-group">
-                        <label for="modifed_on" class="col-md-6 control-label requiredField">
-                         Modified on : 
-                        </label>
-                        <div class ="col-md-6">
-                            <input id="modified_on" class="form-control" type="text" value="" name="modified_on">
-                        </div> 
-                    </div>
+                    </div>                    
                     <div class="form-group">
                         <label for="submit_create_license_key" class="col-md-6 control-label requiredField">
                         </label>
                         <div class ="col-md-3 pull-right">
-                            <input id="submit_create_license_key" class="form-control button btn_custom_button" type="submit" value="create" name="submit_create_license_key">
+                            <?php echo form_submit($submit_create_license_key + array('class' => 'form-control button')); ?>
                         </div> 
                     </div>
                 </div>

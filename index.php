@@ -1,5 +1,7 @@
 <?php
 /***************** Custom constant **********************/
+include './constants/configuration.php';
+include './constants/response_codes.php';
 
 define('MEMBER', 'members');
 define('MANAGER', 'manager');
