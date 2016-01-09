@@ -28,7 +28,7 @@
                                 <th style="text-align: center;"><?php echo $license_key_info->createdOn?></th>
                                 <th style="text-align: center;"><?php echo $license_key_info->modifiedOn?></th>
                                 <th style="text-align: center"><a href="<?php echo base_url() . "license_key/update_license_key/".$license_key_info->key; ?>">Edit</a></th>
-                                <th style="text-align: center; cursor: pointer;"><a onclick="open_modal_delete_license_key_confirm('<?php echo $license_key_info->key?>')"value="" class="">
+                                <th style="text-align: center; cursor: pointer;"><a onclick="open_modal_delete_license_key_confirm('<?php echo $license_key_info->key; ?>')"value="" class="">
                                         Delete </a></th>
                             </tr>
                             <?php } ?>
